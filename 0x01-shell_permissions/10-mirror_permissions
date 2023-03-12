@@ -1,4 +1,2 @@
 #!/bin/bash
-olleh_mode=$(stat -c "%a" olleh)
-chmod $olleh_mode hello
-cho "hello's mode is now set to $olleh_mode, matching olleh's mode."
+chmod "$olleh_mode_octal" hello
