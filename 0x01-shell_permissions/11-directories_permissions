@@ -1,2 +1,10 @@
 #!/bin/bash
-chmod -R +X
+# Add execute permission to all subdirectories of the current directory for the owner, the group owner, and all other users.
+for dir in */; do
+    # Check if the file is a directory
+    if [[ -d "$dir" ]]; then
+        # Add execute permission for the owner, group owner, and all other users
+        chmod 755 "$dir"
+    fi
+done
+
