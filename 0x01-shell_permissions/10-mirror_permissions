@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod "$olleh_mode_octal" hello
+chmod "--wxr-xr--" hello
