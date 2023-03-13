@@ -1,3 +1,2 @@
 #!/bin/bash
-lines=($(cat iacta))
-echo "${lines[2]}"
+head -n 3 file.txt | tail -n 1
