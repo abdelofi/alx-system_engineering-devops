@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -name '*' -empty | sed 's|./||'
+find . -name '*' -empty
