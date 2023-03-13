@@ -1,0 +1,4 @@
+#!/bin/bash
+find . -type f -name '*.gif' | sed 's/\.[^.]*$//' | sort -f > gifs.txt
+cat gifs.txt
+rm gifs.txt
