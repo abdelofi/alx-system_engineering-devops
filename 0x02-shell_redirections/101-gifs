@@ -1,4 +1,2 @@
 #!/bin/bash
-find . -type f -name '*.gif' | sed 's/\.[^.]*$//' | sort -f > gifs.txt
-cat gifs.txt
-rm gifs.txt
+find . -type d -empty -printf "%f\n" ; find . -type f -empty -printf "%f\n" ; echo
