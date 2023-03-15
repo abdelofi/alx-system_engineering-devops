@@ -1,3 +1,2 @@
 #!/bin/bash
-mkdir action
-print PATH/action
+mkdir action print cd/action
