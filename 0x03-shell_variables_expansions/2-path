@@ -1,2 +1,2 @@
 #!/bin/bash
-mkdir action print cd/action
+mkdir action print $PATH/action
