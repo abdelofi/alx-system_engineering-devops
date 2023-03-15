@@ -1,2 +1,2 @@
 #!/bin/bash
-echo hello alias user="cd"
+alias hello=hello ; user="cd/root"
