@@ -1,3 +1,13 @@
 #!/bin/bash
-set -o posix
-set | less
+
+# List all local variables
+echo "Local Variables:"
+echo $(set | awk 'BEGIN {FS="="} /^[^=]+=$/ {print $1}')
+
+# List all environment variables
+echo "Environment Variables:"
+echo $(printenv | awk 'BEGIN {FS="="} /^[^=]+=$/ {print $1}')
+
+# List all functions
+echo "Functions:"
+echo $(declare -F | awk '{print $3}')
