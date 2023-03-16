@@ -1,2 +1,19 @@
 #!/bin/bash
-echo "$(set | echo "$(env)" | echo "$(declare -F)"
+
+# List local variables
+echo "Local Variables:"
+declare -p | awk '{print $3}' | grep -v 'BASH' | while read var; do
+  echo "$var"
+done
+
+# List environment variables
+echo -e "\nEnvironment Variables:"
+env | awk -F= '{print $1}' | while read var; do
+  echo "$var"
+done
+
+# List functions
+echo -e "\nFunctions:"
+declare -F | awk '{print $3}' | while read func; do
+  echo "$func"
+done
