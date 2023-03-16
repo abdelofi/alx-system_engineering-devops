@@ -1,3 +1,7 @@
 #!/bin/bash
-printenv
-set | less
+echo "Local Variables:"
+echo "$(set | grep '^[[:alpha:]][[:alnum:]_]*=[^=]*$')"
+echo "Environment Variables:"
+echo "$(env)"
+echo "Functions:"
+echo "$(declare -F)"
