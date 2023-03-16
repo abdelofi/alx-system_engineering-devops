@@ -1,7 +1,2 @@
 #!/bin/bash
-echo "Local Variables:"
-echo "$(set | grep '^[[:alpha:]][[:alnum:]_]*=[^=]*$')"
-echo "Environment Variables:"
-echo "$(env)"
-echo "Functions:"
-echo "$(declare -F)"
+echo "$(set | echo "$(env)" | echo "$(declare -F)"
