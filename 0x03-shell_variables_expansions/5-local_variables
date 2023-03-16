@@ -1,2 +1,2 @@
 #!/bin/bash
-for var in "${!BASH_*}" "${!COMP_*}" "${!FUNCNAME_*}" "${!LINENO_*}" "${!FUNCVARS_*}"; do echo "${var}=${!var}"; done
+set.sorted printenv.sorted | grep "<" | awk '{ print $2 }'
