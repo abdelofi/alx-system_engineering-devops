@@ -1,19 +1,9 @@
 #!/bin/bash
-
 # Set TRUEKNOWLEDGE to 128
 export TRUEKNOWLEDGE=128
-
 # Add 128 and TRUEKNOWLEDGE, and store the result in RESULT
 RESULT=$((128 + $TRUEKNOWLEDGE))
-
-# Print the result
-echo $RESULT
-
 # Update TRUEKNOWLEDGE to 89
 export TRUEKNOWLEDGE=89
-
 # Add 128 and TRUEKNOWLEDGE again, and store the new result in RESULT
 RESULT=$((128 + $TRUEKNOWLEDGE))
-
-# Print the new result
-echo $RESULT
