@@ -1,3 +1,4 @@
 #!/bin/bash
 TRUEKNOWLEDGE=$TRUKNOWLEDGE
 result=$((128 + $TRUEKNOWLEDGE))
+echo "result"
