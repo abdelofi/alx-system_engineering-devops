@@ -1,2 +1,28 @@
 #!/bin/bash
-cp -u *.htm ..
+
+# Copy all HTML files from current directory to parent directory
+# Only copy files that don't exist in parent directory or are newer
+
+# Get current working directory
+current_dir=$(pwd)
+
+# Get parent directory
+parent_dir=$(dirname "$current_dir")
+
+# Loop through HTML files in current directory
+for file in "$current_dir"/*.html; do
+    # Get filename without path
+    filename=$(basename "$file")
+
+    # Check if file exists in parent directory
+    if [[ -e "$parent_dir/$filename" ]]; then
+        # Check if file in parent directory is older than file in current directory
+        if [[ "$file" -nt "$parent_dir/$filename" ]]; then
+            # Copy file to parent directory
+            cp "$file" "$parent_dir"
+        fi
+    else
+        # Copy file to parent directory
+        cp "$file" "$parent_dir"
+    fi
+done
